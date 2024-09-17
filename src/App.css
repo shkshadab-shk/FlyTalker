@@ -1,38 +1,104 @@
-.App {
+/* App.css */
+.chat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+h1{
+  padding: 0px;
+  margin: 0px;
   text-align: center;
+  border-radius: 10px;
+  background-color:#fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chat-box {
+  width: 400px;
+  height: 600px;
+  border-radius: 10px;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #fafafa;
+  border-bottom: 1px solid #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  max-width: 80%;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.own-message {
+  background-color: #dcf8c6;
+  float: right; /* Your own messages float right */
+  clear: both;
+  border-radius: 15px 0 15px 15px; /* Rounded corners for better design */
+  margin-right: 10px;
+  text-align: right;
+}
+
+.other-message {
+  background-color: #e9e9e9;
+  float: left; /* Messages from others float left */
+  clear: both;
+  border-radius: 0 15px 15px 15px; /* Rounded corners for better design */
+  margin-left: 10px;
+  text-align: left;
+}
+
+.input-box {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #00bfa5;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #00a994;
+}
+
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
 }
